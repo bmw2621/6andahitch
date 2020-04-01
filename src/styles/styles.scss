@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Palanquin:wght@100;200;300;400;500;600;700&display=swap');
+
+* {
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  &:active, &:visited {
+    color: black;
+  }
+}
+html,
+body {
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+  font-family: 'Amiri';
+  color: #252527;
+}
+
+main {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 960px;
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  width: 100%;
+  height: auto;
+  padding: 10px;
+  text-align: center;
+  background: #8CC9C7;
+  font-size: 2vh;
+
+  & > a {
+    text-decoration: none;
+
+    &:visited{
+      color: #4D556B;
+    }
+  }
+}
+
+.heading {
+  margin-bottom: 0;
+  font-weight: 400;
+  font-size: 6vh;
+  text-align: center;
+}
+
+.instagramPhotos {
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#layer {
+  width: 100%;
+  height: 100%;
+  background-color: #8CC9C7;
+  opacity: .5;
+}
+
+.more {
+  width: 100%;
+  font-size: 3vh;
+  text-align: center;
+  &:hover {
+    background: #DDD;
+  }
+}
+
+.photo {
+  margin: 0;
+  padding: 0;
+  position:  relative;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  filter: grayscale(80%) opacity(70%) brightness(115%);
+  transition: 0.5s ease-in-out;
+  &:hover {
+    transform: scale(1.2);
+    filter: none;
+    z-index: 99;
+    transition: 0.5s ease-in-out;
+  }
+}
+
+.photoContainer {
+  margin: 0;
+  padding: 0;
+  width: 50%;
+  height:0px;
+  padding-top: 100%;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+#primaryLogo {
+  height: 30vh;
+  z-index: 99;
+  margin: 10px;
+}
+
+#primaryNav {
+  height: 10vh;
+  max-height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 12vw;
+  margin-bottom: 12vh;
+  background: #D1B3BB;
+  & > * {
+    margin: 5px;
+  }
+  & > a {
+    height: 80%;
+    width: fit-content;
+  }
+}
+
+section {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.socialLink {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#splash {
+  height: 25vh;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-image: url('https://www.pointswithacrew.com/wp-content/uploads/2018/12/new-zealand-mountains-cc0.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: grayscale(100%);
+  }
+}
