@@ -23,7 +23,7 @@ const InstagramPhotos = () => {
         <>
             <div id="instagramPhotos">
                 {
-                    photos.map(photo => <a href={`https://www.instagram.com/p/${photo.id}`} className="photoContainer"><img className="photo" key={photo.id} src={photo.thumbnails[3].src} /></a>)
+                    photos.map(photo => <a href={`https://www.instagram.com/p/${photo.id}`} className="photoContainer"><img key={photo.id} src={photo.thumbnails[3].src} alt="This zooms-in really well and smooth" /></a>)
                 }
             </div>
             <a className="more" href="https://twitter.com/6andahitch">More</a>

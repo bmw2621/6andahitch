@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from 'gatsby';
 
 // Import Images
 const youtubeLogo = require("../images/youtube_logo.png")
@@ -13,7 +14,7 @@ const Header = () => (
     <nav id="primaryNav">
       <a href="https://www.youtube.com/channel/UCU-yYMrVatHS5nqe7x6-VCQ"><img className="socialLink" src={youtubeLogo} alt="YouTube Channel"/></a>
       <a href="https://www.facebook.com/6-a-Hitch-107970910848155/"><img className="socialLink" src={facebookLogo} alt="Facebook Page"/></a>
-      <img id="primaryLogo" src={siteLogo} alt=""/>
+      <Link to="/" id="primaryLogoContainer"><img id="primaryLogo" src={siteLogo} alt=""/></Link>
       <a href="https://www.instagram.com/6andahitch/"><img className="socialLink" src={instagramLogo} alt="Instagram Page"/></a>
       <a href="https://twitter.com/6andahitch"><img className="socialLink" src={twitterLogo} alt="Twitter Feed"/></a>
     </nav>
