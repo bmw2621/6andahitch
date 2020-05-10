@@ -4,7 +4,7 @@ import { useStaticQuery, graphql } from "gatsby"
 const InstagramPhotos = () => {
     const data = useStaticQuery(graphql`
         query {
-            allInstaNode {
+            allInstaNode(sort: {fields: timestamp, order: DESC}, limit: 8) {
                 nodes {
                     id
                     timestamp

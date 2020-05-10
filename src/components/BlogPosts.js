@@ -4,37 +4,40 @@ import { Link, useStaticQuery, graphql } from "gatsby"
 const BlogPosts = () => { 
     const { allMdx }  = useStaticQuery(graphql`
         {
-            allMdx {
+            allMdx(sort: {fields: frontmatter___date, order: DESC}) {
                 nodes {
-                    id
-                    frontmatter {
+                        id
+                        frontmatter {
                         title
                         slug
                         date
-                        feature_image{
+                        feature_image {
                             relativePath
                         }
                     }
                 }
             }
-        }
+        }      
     `)
 
-    let posts = allMdx.nodes
-    const mostRecentPost = posts.pop()
-    const postsOrdered = posts.reverse()
+    const posts = allMdx.nodes
+    const mostRecentPost = posts[0]
+    const olderPosts = posts.slice(1, posts.length)
+
+    console.log(mostRecentPost)
+    console.log(olderPosts)
 
     const mostRecentPostFeatureImage = require(`../posts/${mostRecentPost.frontmatter.feature_image.relativePath}`)
     
-    let postsOrderedData = []
+    let olderPostsData = []
 
-    for(let i = 0; i < postsOrdered.length; i++){
-        postsOrderedData.push({
-            id: postsOrdered[i].id,
-            title: postsOrdered[i].frontmatter.title,
-            date: postsOrdered[i].frontmatter.date,
-            slug: postsOrdered[i].frontmatter.slug,
-            image: require(`../posts/${postsOrdered[i].frontmatter.feature_image.relativePath}`),
+    for(let i = 0; i < olderPosts.length; i++){
+        olderPostsData.push({
+            id: olderPosts[i].id,
+            title: olderPosts[i].frontmatter.title,
+            date: olderPosts[i].frontmatter.date,
+            slug: olderPosts[i].frontmatter.slug,
+            image: require(`../posts/${olderPosts[i].frontmatter.feature_image.relativePath}`),
             })
     }
 
@@ -61,7 +64,7 @@ const BlogPosts = () => {
                     </Link>
                 </div>
                 <div id="olderPosts">
-                    {postsOrderedData.map(post => {
+                    {olderPostsData.map(post => {
                         firstColor = (firstColor + 1) % 3
                         console.log(firstColor)
                         return (
@@ -74,7 +77,7 @@ const BlogPosts = () => {
                     })}
                 </div>
             </div>
-            <a className="more" href="#">More</a>
+            <Link className="more" to="/blog">More</Link>
         </>
     )
 }

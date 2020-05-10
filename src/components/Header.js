@@ -6,7 +6,7 @@ const youtubeLogo = require("../images/youtube_logo.png")
 const facebookLogo = require("../images/facebook_logo.png")
 const instagramLogo = require("../images/instagram_logo.png")
 const twitterLogo = require("../images/twitter_logo.png")
-const siteLogo = require("../images/6+Hitch_logo.svg")
+const siteLogo = require("../images/6+Hitch_Logo.png")
 
 const Header = () => (
   <header>

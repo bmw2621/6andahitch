@@ -11,6 +11,8 @@ const shortcodes = { Link }
 
 export default function PostsTemplate({ data: { mdx } }) {
 
+  
+
   const featureImage = require(`../posts/${mdx.frontmatter.feature_image.relativePath}`)
 
   return (
