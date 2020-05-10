@@ -4,7 +4,7 @@ import { Link, useStaticQuery, graphql } from "gatsby"
 const BlogPosts = () => { 
     const { allMdx }  = useStaticQuery(graphql`
         {
-            allMdx(sort: {fields: frontmatter___date, order: DESC}) {
+            allMdx(sort: {fields: frontmatter___slug, order: DESC}, limit: 5) {
                 nodes {
                         id
                         frontmatter {
