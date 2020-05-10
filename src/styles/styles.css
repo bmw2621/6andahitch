@@ -94,7 +94,7 @@ main {
   text-shadow: 3px 3px 5px black;
   width: 100%;
   color: #F6F6F6;
-  font-size: 4vw;
+  font-size: 4vh;
   text-align: center;
 }
 
@@ -246,7 +246,7 @@ footer > a:visited {
 #primaryLogo {
   height: 30vh;
   z-index: 99;
-  margin: 10px;
+  margin: -5px;
 }
 
 #primaryLogoContainer {
@@ -276,11 +276,11 @@ footer > a:visited {
 }
 
 #primaryNav > * {
-  margin: 5px;
+  margin: 4px;
 }
 
 #primaryNav > a {
-  height: 80%;
+  height: 70%;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;

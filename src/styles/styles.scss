@@ -84,7 +84,7 @@ main {
   text-shadow: 3px 3px 5px black;
   width: 100%;
   color: #F6F6F6;
-  font-size: 4vw;
+  font-size: 4vh;
   text-align: center;
   & > span {
     font-size: 2vh;
@@ -201,7 +201,7 @@ footer {
 #primaryLogo {
   height: 30vh;
   z-index: 99;
-  margin: 10px;
+  margin: -5px;
 }
 
 #primaryLogoContainer {
@@ -219,10 +219,10 @@ footer {
   margin-bottom: 12vh;
   background: #D1B3BB;
   & > * {
-    margin: 5px;
+    margin: 4px;
   }
   & > a {
-    height: 80%;
+    height: 70%;
     width: fit-content;
   }
 }

@@ -58,7 +58,10 @@ const BlogPosts = () => {
             <div id="blogPosts">
                 <div id="firstPost">
                     <Link to={`/${mostRecentPost.frontmatter.slug}`}>
-                        <span className="blogPostInfo" style={{"top":"40%"}}>{mostRecentPost.frontmatter.title}<br/><span>{mostRecentPost.frontmatter.date}</span></span>
+                        <span className="blogPostInfo" style={{"top":"40%"}}>
+                            {mostRecentPost.frontmatter.title}<br/>
+                            <span>{mostRecentPost.frontmatter.date}</span>
+                        </span>
                         <div className="blogPostBg" style={{"background": blogPostColors[firstColor]}}></div>
                         <img src={mostRecentPostFeatureImage} alt="Blog Post"/>
                     </Link>
