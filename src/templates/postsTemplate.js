@@ -19,6 +19,10 @@ export default function PostsTemplate({ data: { mdx } }) {
     <Layout>
       <img src={featureImage} className="featureImage" alt="Blog Post"/>
       <MDXProvider components={shortcodes}>
+        <h1 style={{"marginBottom":"0"}}>{mdx.frontmatter.title}</h1>
+        <span style={{"fontWeight":"bold"}}>{mdx.frontmatter.date}</span>
+        <span style={{"fontStyle":"italic"}}>{mdx.frontmatter.author}</span>
+        <br />
         <MDXRenderer>{mdx.body}</MDXRenderer>
       </MDXProvider>
       <Link to="/" className="more">Back</Link>
@@ -34,6 +38,7 @@ export const pageQuery = graphql`
       frontmatter {
         title
         author
+        date
         feature_image {
           relativePath
         }

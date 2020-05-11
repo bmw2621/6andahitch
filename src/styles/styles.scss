@@ -198,6 +198,10 @@ footer {
   }
 }
 
+p > a {
+  text-decoration: underline;
+}
+
 #primaryLogo {
   height: 30vh;
   z-index: 99;

@@ -6,6 +6,7 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    `gatsby-remark-images`,
     {
       resolve: "gatsby-plugin-page-creator",
       options: {
@@ -17,7 +18,15 @@ module.exports = {
       options: {
         defaultLayouts: {
           default: require.resolve("./src/components/Layout.js"),
-        }
+        },
+        gatsbyRemarkPlugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 1200,
+            }
+          }
+        ]
       }
     },
     {
